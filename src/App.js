@@ -21,18 +21,26 @@ function Loader() {
 
 function App() {
   return (
-    <div className="canvas">
-      <Suspense fallback={null}>
-        <Canvas camera={{ position: [0, 4, 6] }}>
-          <Suspense fallback={<Loader />}>
-            <Avatar5 />
-            <Sky />
-            <ambientLight intensity={0.9} />
-            <Video scale={[10, 5, 1]} position={[0, 3, 0]} />
-          </Suspense>
-        </Canvas>
-      </Suspense>
-    </div>
+    <>
+      <div className="canvas">
+        <Suspense fallback={null}>
+          <Canvas camera={{ position: [0, 4, 6] }}>
+            <Suspense fallback={<Loader />}>
+              <Avatar5 />
+              <Sky />
+              <ambientLight intensity={0.9} />
+              <Video scale={[10, 5, 1]} position={[0, 3, 10]} />
+            </Suspense>
+          </Canvas>
+        </Suspense>
+      </div>
+      <video
+        id="video"
+        style={{ display: "none" }}
+        autoplay
+        playsinline
+      ></video>
+    </>
   );
 }
 
