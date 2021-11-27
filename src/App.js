@@ -12,7 +12,6 @@ import {
 import { Canvas } from "@react-three/fiber";
 
 import Avatar5 from "./components/Avatar5";
-import Video from "./components/Video";
 
 function Loader() {
   const { progress } = useProgress();
@@ -29,7 +28,6 @@ function App() {
               <Avatar5 />
               <Sky />
               <ambientLight intensity={0.9} />
-              <Video scale={[10, 5, 1]} position={[0, 3, 10]} />
             </Suspense>
           </Canvas>
         </Suspense>
