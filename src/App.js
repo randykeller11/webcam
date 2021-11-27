@@ -1,17 +1,18 @@
 import "./App.css";
-import React, { Suspense, useEffect } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import {
   useGLTF,
   useProgress,
   Html,
   OrbitControls,
   Sky,
+  useAspect,
 } from "@react-three/drei";
 
 import { Canvas } from "@react-three/fiber";
 
 import Avatar5 from "./components/Avatar5";
-import CoolCity from "./components/CoolCity";
+import Video from "./components/Video";
 
 function Loader() {
   const { progress } = useProgress();
@@ -25,16 +26,9 @@ function App() {
         <Canvas camera={{ position: [0, 4, 6] }}>
           <Suspense fallback={<Loader />}>
             <Avatar5 />
-            <CoolCity scale={[0.6, 0.6, 0.6]} />
+            <Sky />
             <ambientLight intensity={0.9} />
-            <mesh
-              position={[50, 0, 50]}
-              scale={[100, 200, 5]}
-              rotation={[-Math.PI / 2, 0, 0]}
-            >
-              <planeBufferGeometry attach="geometry" args={[3, 3]} />
-              <meshBasicMaterial attach="material" color="gray" />
-            </mesh>
+            <Video scale={[10, 5, 1]} position={[0, 3, 0]} />
           </Suspense>
         </Canvas>
       </Suspense>
