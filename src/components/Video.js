@@ -24,7 +24,6 @@ export default function Scene({ ...props }) {
 
     return vid;
   });
-  useEffect(() => void video.play(), [video]);
   return (
     <mesh scale={size} {...props}>
       <planeBufferGeometry args={[1, 1]} />
