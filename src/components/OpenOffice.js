@@ -23,12 +23,12 @@ export default function Model({ ...props }) {
         <mesh
           geometry={nodes.Material2.geometry}
           material={materials.Color_000}
-          material-color="blue"
+          material-color="pink"
         />
         <mesh
           geometry={nodes.Material2001.geometry}
           material={nodes.Material2001.material}
-          material-color="darkblue"
+          material-color="#FF5E18"
         />
         <mesh
           geometry={nodes.Material2002.geometry}

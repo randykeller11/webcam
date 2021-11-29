@@ -91,7 +91,7 @@ export default function Model({ ...props }) {
   });
   return (
     <group ref={group} {...props} dispose={null}>
-      <WebCamScreen />
+      {/* <WebCamScreen /> */}
       <primitive object={nodes.Hips} />
       <skinnedMesh
         geometry={nodes.EyeLeft.geometry}

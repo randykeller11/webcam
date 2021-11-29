@@ -37,7 +37,7 @@ function App() {
           <Canvas camera={{ position: [0, 4, 6] }}>
             <Suspense fallback={<Loader />}>
               <Avatar5 />
-              <OpenOffice scale={[3, 2, 5]} position={[-20, 0, 10]} />
+              <OpenOffice scale={[3, 2.5, 5]} position={[-20, 0, 10]} />
               <Background
                 rotation={[0, Math.PI / 1, 0]}
                 position={[6, 9, 20]}
